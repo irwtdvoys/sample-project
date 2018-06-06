@@ -1,0 +1,11 @@
+# IDE
+/.idea/
+*.iml
+
+# Environment
+.DS_Store
+
+# Project
+/vendor/
+.env
+/docker/db/
