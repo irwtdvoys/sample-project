@@ -190,4 +190,4 @@ For location based searches an additional field is added to the postcodes `dista
 
 While the chosen MariaDB solution does solve the criteria I did toy around with other data storage solutions. My goto is ElasticSearch for anything geospatial however I felt that without the polygon data for the full regions of a postcode it wouldn't be able to provide additional benefits.
 
-Changing it in the future is still an option. If different data becomes available a new set of ElasticSearch adapters for the models and repositories would enable the data to be stores and searched in an ElasticSearch cluster without any changes to the core code.
+Changing it in the future is still an option. If different data becomes available a new set of ElasticSearch adapters for the models and repositories would enable the data to be stored and searched in an ElasticSearch cluster without any changes to the core code.

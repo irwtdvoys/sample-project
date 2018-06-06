@@ -7,7 +7,7 @@
 	define("API_NAME", "TEST");
 
 	// Versioning
-	define("VERSION_INTERNAL_CODE", "v0.0.1");
+	define("VERSION_INTERNAL_CODE", "v0.0.2");
 	define("VERSION_INTERNAL_API", "test");
 
 	if (DEPLOYMENT == "development") // Framework expects server to be setup with no errors displayed
