@@ -3,19 +3,18 @@
 
 	use App\Interfaces\Repositories\Postcodes;
 	use App\Models\Postcode;
+	use Bolt\Adapter;
+	use Bolt\Connections\Dbo as Connection;
 	use Bolt\GeoJson\Geometry;
-	use Bolt\Interfaces\Model;
 
-	class Dbo extends Model implements Postcodes
+	class Dbo extends Adapter implements Postcodes
 	{
-		private $resource;
-
-		public function __construct(\Bolt\Connections\Dbo $resource)
+		public function __construct(Connection $resource)
 		{
 			$this->resource = $resource;
 		}
 
-		protected function searchByCode($code, $from = 0, $quantity = null)
+		protected function searchByCode(string $code, int $from = 0, int $quantity = null): array
 		{
 			$limit = ($quantity !== null) ? " LIMIT " . $from . ", " . $quantity : "";
 
@@ -26,7 +25,7 @@
 			return $this->resource->query($SQL, array(":code" => "%" . $code . "%"));
 		}
 
-		protected function searchByLocation(Geometry $location, $from = 0, $quantity = null)
+		protected function searchByLocation(Geometry $location, int $from = 0, int $quantity = null): array
 		{
 			$limit = ($quantity !== null) ? " LIMIT " . $from . ", " . $quantity : "";
 
@@ -47,10 +46,11 @@
 				":lat" => $point->lat(),
 				":lng" => $point->lng()
 			);
+
 			return $this->resource->query($SQL, $parameters);
 		}
 
-		protected function countByCode($code)
+		protected function countByCode(string $code): int
 		{
 			$SQL = "SELECT COUNT(*) AS 'quantity' FROM `postcodes` WHERE `code` LIKE :code";
 			$result = $this->resource->query($SQL, array(":code" => "%" . $code . "%"), true);
@@ -58,7 +58,7 @@
 			return ($result === false) ? 0 : $result['quantity'];
 		}
 
-		protected function countByLocation(Geometry $location)
+		protected function countByLocation(Geometry $location): int
 		{
 			$SQL = "SELECT COUNT(*) AS 'quantity' FROM (
 						SELECT `code`, (ROUND(SQRT(
@@ -79,7 +79,7 @@
 			return ($result === false) ? 0 : $result['quantity'];
 		}
 
-		public function search($parameters = null, $from = 0, $quantity = null)
+		public function search($parameters = null, $from = 0, $quantity = null): array
 		{
 			$results = false;
 
@@ -105,7 +105,7 @@
 			return $postcodes;
 		}
 
-		public function count($parameters = null)
+		public function count($parameters = null): int
 		{
 			$result = 0;
 
@@ -121,7 +121,7 @@
 			return $result;
 		}
 
-		public function bulkSave($postcodes)
+		public function bulkSave($postcodes): array
 		{
 			$SQL = "INSERT INTO `postcodes` VALUES 
 					(
@@ -146,7 +146,6 @@
 			}
 
 			$results = $this->resource->query($SQL, $parameters);
-
 
 			return $results;
 		}

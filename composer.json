@@ -14,8 +14,10 @@
 		}
 	],
 	"require": {
-		"cruxoft/bolt-api": "^0.7",
-		"cruxoft/bolt-geojson": "^0.7",
+		"php": "^8.0",
+		"cruxoft/bolt-api": "^0.12",
+		"cruxoft/bolt-geojson": "^0.9",
+		"cruxoft/bolt-queues": "^0.4",
 		"cruxoft/logbook": "^0.1.2",
 		"vlucas/phpdotenv": "^2.4"
 	},
