@@ -1,8 +1,7 @@
 <?php
 	const ROOT_SERVER = __DIR__ . "/../";
 
-	include_once(ROOT_SERVER . "bin/init.php");
-
+	require_once(ROOT_SERVER . "bin/init.php");
 	require_once(ROOT_SERVER . "vendor/autoload.php");
 
 	$dbo = new Bolt\Connections\Dbo(new Bolt\Connections\Config\Dbo($connection));
