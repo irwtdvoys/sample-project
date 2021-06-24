@@ -43,7 +43,7 @@
 				$this->location = new $type($data);
 			}
 
-			return true;
+			return $this;
 		}
 	}
 ?>
