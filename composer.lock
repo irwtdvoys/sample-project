@@ -4,25 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78f7d2f86a3a85e13c0de0864b216b1b",
+    "content-hash": "44e1e7e9cb722bc1be5e47629058d6cf",
     "packages": [
         {
             "name": "cruxoft/bolt-api",
-            "version": "0.7.4",
+            "version": "0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-api.git",
-                "reference": "82f10b10321458d2b174be9398c41cc54dd64804"
+                "reference": "372dbf6e464360f17400656485bafd9480b51e90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-api/zipball/82f10b10321458d2b174be9398c41cc54dd64804",
-                "reference": "82f10b10321458d2b174be9398c41cc54dd64804",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-api/zipball/372dbf6e464360f17400656485bafd9480b51e90",
+                "reference": "372dbf6e464360f17400656485bafd9480b51e90",
                 "shasum": ""
             },
             "require": {
-                "cruxoft/bolt-mvc": "^0.4",
+                "cruxoft/bolt-mvc": "^0.8.0",
+                "cruxoft/bolt-validation": "^0.3.0",
                 "ralouphie/getallheaders": "^2.0"
+            },
+            "require-dev": {
+                "cruxoft/dump": "^0.2.2"
             },
             "type": "library",
             "autoload": {
@@ -46,27 +50,32 @@
                 "bolt",
                 "rest"
             ],
-            "time": "2018-06-05T17:16:08+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-api/issues",
+                "source": "https://github.com/irwtdvoys/bolt-api/tree/0.12.0"
+            },
+            "time": "2021-06-24T14:27:53+00:00"
         },
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.6.1",
+            "version": "0.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "78ce7b9cb2bd868d3d80c2a82dc7fc0fa04532d2"
+                "reference": "810d7a3979554fb5da39b6b99aa91c09280d0ebd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/78ce7b9cb2bd868d3d80c2a82dc7fc0fa04532d2",
-                "reference": "78ce7b9cb2bd868d3d80c2a82dc7fc0fa04532d2",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/810d7a3979554fb5da39b6b99aa91c09280d0ebd",
+                "reference": "810d7a3979554fb5da39b6b99aa91c09280d0ebd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "cruxoft/bolt-support": "^0.4.0",
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.8.*"
+                "cruxoft/dump": "^0.2.2"
             },
             "type": "library",
             "autoload": {
@@ -89,27 +98,32 @@
                 "bolt",
                 "framework"
             ],
-            "time": "2018-05-08T13:05:41+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-core/issues",
+                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.4"
+            },
+            "time": "2020-12-13T20:09:58+00:00"
         },
         {
             "name": "cruxoft/bolt-geojson",
-            "version": "0.7.2",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-geojson.git",
-                "reference": "08d154cd4cb535717ce93ff167e1c96fad751a62"
+                "reference": "729803fdddc4d0acc735df917d26cd2bc2dcfe72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-geojson/zipball/08d154cd4cb535717ce93ff167e1c96fad751a62",
-                "reference": "08d154cd4cb535717ce93ff167e1c96fad751a62",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-geojson/zipball/729803fdddc4d0acc735df917d26cd2bc2dcfe72",
+                "reference": "729803fdddc4d0acc735df917d26cd2bc2dcfe72",
                 "shasum": ""
             },
             "require": {
-                "cruxoft/bolt-core": "^0.6"
+                "cruxoft/bolt-core": "^0.10.0",
+                "php": "^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.5.*"
+                "cruxoft/dump": "^0.2.2"
             },
             "type": "library",
             "autoload": {
@@ -132,29 +146,39 @@
                 "bolt",
                 "geojson"
             ],
-            "time": "2018-04-03T15:02:55+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-geojson/issues",
+                "source": "https://github.com/irwtdvoys/bolt-geojson/tree/0.9.0"
+            },
+            "time": "2021-06-24T13:54:12+00:00"
         },
         {
             "name": "cruxoft/bolt-mvc",
-            "version": "0.4.4",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-mvc.git",
-                "reference": "3cb62a7e832031c8556067341569581b65c27cb1"
+                "reference": "01fbee54bd85a751c79fbe237109de9d0cd8b8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-mvc/zipball/3cb62a7e832031c8556067341569581b65c27cb1",
-                "reference": "3cb62a7e832031c8556067341569581b65c27cb1",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-mvc/zipball/01fbee54bd85a751c79fbe237109de9d0cd8b8da",
+                "reference": "01fbee54bd85a751c79fbe237109de9d0cd8b8da",
                 "shasum": ""
             },
             "require": {
-                "cruxoft/bolt-core": "^v0.6"
+                "cruxoft/bolt-core": "^0.10.0",
+                "ext-dom": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "cruxoft/dump": "^0.2.2"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Bolt\\": "src/"
+                    "Bolt\\": "src/",
+                    "App\\": "app/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -173,20 +197,166 @@
                 "mvc",
                 "php"
             ],
-            "time": "2018-05-31T08:58:27+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-mvc/issues",
+                "source": "https://github.com/irwtdvoys/bolt-mvc/tree/0.8.0"
+            },
+            "time": "2020-12-05T21:50:00+00:00"
         },
         {
-            "name": "cruxoft/logbook",
-            "version": "0.1.2",
+            "name": "cruxoft/bolt-queues",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/irwtdvoys/logbook.git",
-                "reference": "5050b6c37b4ff0ff893e7da79bd3c5195ce76953"
+                "url": "https://github.com/irwtdvoys/bolt-queues.git",
+                "reference": "2c5a83786f4c334de0bfc047c0e22d06b0a54dc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/logbook/zipball/5050b6c37b4ff0ff893e7da79bd3c5195ce76953",
-                "reference": "5050b6c37b4ff0ff893e7da79bd3c5195ce76953",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-queues/zipball/2c5a83786f4c334de0bfc047c0e22d06b0a54dc8",
+                "reference": "2c5a83786f4c334de0bfc047c0e22d06b0a54dc8",
+                "shasum": ""
+            },
+            "require": {
+                "cruxoft/bolt-core": "^0.10.0",
+                "ext-pcntl": "*",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Adams",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Queues module for Bolt",
+            "keywords": [
+                "bolt",
+                "queues"
+            ],
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-queues/issues",
+                "source": "https://github.com/irwtdvoys/bolt-queues/tree/0.4.0"
+            },
+            "time": "2021-06-24T13:30:54+00:00"
+        },
+        {
+            "name": "cruxoft/bolt-support",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irwtdvoys/bolt-support.git",
+                "reference": "98d2eee0d68795799572850e532f49d6cfbfd4d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-support/zipball/98d2eee0d68795799572850e532f49d6cfbfd4d6",
+                "reference": "98d2eee0d68795799572850e532f49d6cfbfd4d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "cruxoft/dump": "^0.2",
+                "phpunit/phpunit": "^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Adams",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Standalone support library for the Bolt Framework",
+            "keywords": [
+                "bolt"
+            ],
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-support/issues",
+                "source": "https://github.com/irwtdvoys/bolt-support/tree/0.4.0"
+            },
+            "time": "2020-12-13T20:06:55+00:00"
+        },
+        {
+            "name": "cruxoft/bolt-validation",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irwtdvoys/bolt-validation.git",
+                "reference": "79f4822a15938c700a2cee155eaff6f61d1fb8aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-validation/zipball/79f4822a15938c700a2cee155eaff6f61d1fb8aa",
+                "reference": "79f4822a15938c700a2cee155eaff6f61d1fb8aa",
+                "shasum": ""
+            },
+            "require": {
+                "cruxoft/bolt-core": "^0.10.0",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "cruxoft/dump": "^0.2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Adams",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Validation module for Bolt",
+            "keywords": [
+                "bolt",
+                "geojson"
+            ],
+            "support": {
+                "issues": "https://github.com/irwtdvoys/bolt-validation/issues",
+                "source": "https://github.com/irwtdvoys/bolt-validation/tree/0.3.0"
+            },
+            "time": "2020-12-05T22:17:36+00:00"
+        },
+        {
+            "name": "cruxoft/logbook",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irwtdvoys/logbook.git",
+                "reference": "a1db9c0fabf2a1e05a541d4aa86ec549984225be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irwtdvoys/logbook/zipball/a1db9c0fabf2a1e05a541d4aa86ec549984225be",
+                "reference": "a1db9c0fabf2a1e05a541d4aa86ec549984225be",
                 "shasum": ""
             },
             "require": {
@@ -213,20 +383,24 @@
                 }
             ],
             "description": "Simple wrapper for interaction with Monolog's Registry",
-            "time": "2018-03-05T16:10:52+00:00"
+            "support": {
+                "issues": "https://github.com/irwtdvoys/logbook/issues",
+                "source": "https://github.com/irwtdvoys/logbook/tree/0.1.3"
+            },
+            "time": "2018-07-13T09:57:38+00:00"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.23.0",
+            "version": "1.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
+                "reference": "c6b00f05152ae2c9b04a448f99c7590beb6042f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
-                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c6b00f05152ae2c9b04a448f99c7590beb6042f5",
+                "reference": "c6b00f05152ae2c9b04a448f99c7590beb6042f5",
                 "shasum": ""
             },
             "require": {
@@ -240,11 +414,10 @@
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
+                "phpstan/phpstan": "^0.12.59",
                 "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
@@ -263,11 +436,6 @@
                 "sentry/sentry": "Allow sending log messages to a Sentry server"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Monolog\\": "src/Monolog"
@@ -291,20 +459,34 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-06-19T01:22:40+00:00"
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/1.26.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-05-28T08:32:12+00:00"
         },
         {
             "name": "psr/log",
-            "version": "1.0.2",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +495,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -328,7 +510,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -338,7 +520,10 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -378,32 +563,122 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/2.0.5"
+            },
             "time": "2016-02-11T07:05:27+00:00"
         },
         {
-            "name": "vlucas/phpdotenv",
-            "version": "v2.4.0",
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=7.1"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+            "suggest": {
+                "ext-ctype": "For best performance"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-main": "1.23-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-02-19T12:13:01+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "b786088918a884258c9e3e27405c6a4cf2ee246e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b786088918a884258c9e3e27405c6a4cf2ee246e",
+                "reference": "b786088918a884258c9e3e27405c6a4cf2ee246e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.9 || ^7.0 || ^8.0",
+                "symfony/polyfill-ctype": "^1.17"
+            },
+            "require-dev": {
+                "ext-filter": "*",
+                "ext-pcre": "*",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20"
+            },
+            "suggest": {
+                "ext-filter": "Required to use the boolean validator.",
+                "ext-pcre": "Required to use most of the library."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -413,13 +688,18 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause-Attribution"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com",
+                    "homepage": "https://gjcampbell.co.uk/"
+                },
+                {
                     "name": "Vance Lucas",
                     "email": "vance@vancelucas.com",
-                    "homepage": "http://www.vancelucas.com"
+                    "homepage": "https://vancelucas.com/"
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
@@ -428,7 +708,21 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01T10:05:43+00:00"
+            "support": {
+                "issues": "https://github.com/vlucas/phpdotenv/issues",
+                "source": "https://github.com/vlucas/phpdotenv/tree/v2.6.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-20T14:39:13+00:00"
         }
     ],
     "packages-dev": [
@@ -469,6 +763,10 @@
                 }
             ],
             "description": "A system for generating structure information about nested variables for use including screen display",
+            "support": {
+                "issues": "https://github.com/irwtdvoys/dump/issues",
+                "source": "https://github.com/irwtdvoys/dump/tree/master"
+            },
             "time": "2018-03-14T14:14:53+00:00"
         }
     ],
@@ -477,6 +775,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": {
+        "php": "^8.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
