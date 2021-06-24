@@ -1,24 +1,21 @@
 <?php
 	namespace App\Controllers;
 
+	use App\Masks\Search as InputMask;
 	use App\Models\Postcode;
+	use App\Repositories\Postcodes as PostcodesRepo;
 	use Bolt\Api;
 	use Bolt\Api\Request\Range;
 	use Bolt\Controller;
+	use Bolt\Http\Codes as HttpCodes;
 
 	class Postcodes extends Controller
 	{
-		public function getById(Api $api)
+		public function getById(Api $api): Postcode
 		{
-			$postcode = new Postcode($api->connections->dbo());
-			$postcode->code($api->route->info->id());
-
-			$result = $postcode->load();
-
-			if ($result === false)
-			{
-				$api->response->status(404, "Postcode not found");
-			}
+			$postcode = (new Postcode($api->connections->dbo()))
+				->code($api->route->info->id())
+				->load();
 
 			return $postcode;
 		}
@@ -27,15 +24,15 @@
 		{
 			if (!isset($api->request->parameters->code) && !isset($api->request->parameters->location))
 			{
-				$api->response->status(400, "Missing required field, `code` or `location` must be provided");
+				$api->response->status(HttpCodes::BAD_REQUEST, "Missing required field, `code` or `location` must be provided");
 			}
 
-			$parameters = $api->request->parameters->filter(array("code", "location"));
+			$parameters = $api->request->parameters->validate(InputMask::class, true);
 
 			// validate location
 			if (isset($parameters['location']))
 			{
-				$type = "\\Bolt\\GeoJson\\Geometry\\" . $parameters['location']->type;
+				$type = "\\Bolt\\GeoJson\\Geometry\\" . $parameters['location']['type'];
 
 				try
 				{
@@ -44,28 +41,18 @@
 				catch (\Exception $exception)
 				{
 					// catch error generating geojson object
-					$api->response->status(400, $exception->getMessage());
+					$api->response->status(HttpCodes::BAD_REQUEST, $exception->getMessage());
 				}
 			}
 
-			$helper = new \App\Repositories\Postcodes($api->connections->dbo());
-
+			$helper = new PostcodesRepo($api->connections->dbo());
 			$total = $helper->count($parameters);
-
-			if (isset($api->request->headers->range))
-			{
-				$range = $api->request->getRangeData($total);
-			}
-			else
-			{
-				// set default range if none supplied in header
-				$range = new Range("indices=0-24", $total);
-			}
+			$range = isset($api->request->headers->range) ? $api->request->getRangeData($total) : new Range("indices=0-24", $total);
 
 			// requested range not satisfiable
 			if ($range->start() > max(0, ($total - 1)))
 			{
-				$api->response->status(416);
+				$api->response->status(HttpCodes::REQUESTED_RANGE_NOT_SATISFIABLE);
 			}
 
 			$start = $range->start();
@@ -73,7 +60,7 @@
 
 			// prepare response based on full/partial request
 			$api->response->headers->add("Content-Range: indices " . $range->start() . "-" . $range->end() . "/" . $total);
-			$api->response->code = ($quantity == $total || $total === 0) ? 200 : 206;
+			$api->response->code = ($quantity == $total || $total === 0) ? HttpCodes::OK : HttpCodes::PARTIAL_CONTENT;
 
 			return $helper->search($parameters, $start, $quantity);
 		}
