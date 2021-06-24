@@ -32,7 +32,7 @@
 			// validate location
 			if (isset($parameters['location']))
 			{
-				$type = "\\Bolt\\GeoJson\\Geometry\\" . $parameters['location']['type'];
+				$type = "\\Bolt\\GeoJson\\Geometry\\" . $parameters['location']->type;
 
 				try
 				{
