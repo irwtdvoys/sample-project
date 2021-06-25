@@ -1,4 +1,4 @@
-# Sample Project
+# Sample Project (0.1.0)
 
 ## Purpose
 
@@ -53,8 +53,7 @@ There is a sample csv taken from the full mySociety open data set, in this case 
 
 ```sh
 $ docker exec -it sampleproject_php_1 bash
-$ cd /code/scripts/
-$ php import.php -f data/bh.csv
+$ ./bin/run.php --job Import --data '{"file":"scripts/data/bh.csv"}'
 ```
 
 ### Controllers
