@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cruxoft/bolt-api",
-            "version": "0.12.0",
+            "version": "0.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-api.git",
-                "reference": "372dbf6e464360f17400656485bafd9480b51e90"
+                "reference": "cc120e5b0f1e09998a39076f70e2dcf63818d419"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-api/zipball/372dbf6e464360f17400656485bafd9480b51e90",
-                "reference": "372dbf6e464360f17400656485bafd9480b51e90",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-api/zipball/cc120e5b0f1e09998a39076f70e2dcf63818d419",
+                "reference": "cc120e5b0f1e09998a39076f70e2dcf63818d419",
                 "shasum": ""
             },
             "require": {
@@ -52,22 +52,22 @@
             ],
             "support": {
                 "issues": "https://github.com/irwtdvoys/bolt-api/issues",
-                "source": "https://github.com/irwtdvoys/bolt-api/tree/0.12.0"
+                "source": "https://github.com/irwtdvoys/bolt-api/tree/0.12.2"
             },
-            "time": "2021-06-24T14:27:53+00:00"
+            "time": "2021-06-24T20:58:05+00:00"
         },
         {
             "name": "cruxoft/bolt-core",
-            "version": "0.10.4",
+            "version": "0.10.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-core.git",
-                "reference": "810d7a3979554fb5da39b6b99aa91c09280d0ebd"
+                "reference": "52dbf5d6731d0f9b5bcf3b21cdbe74f63b295c59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/810d7a3979554fb5da39b6b99aa91c09280d0ebd",
-                "reference": "810d7a3979554fb5da39b6b99aa91c09280d0ebd",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-core/zipball/52dbf5d6731d0f9b5bcf3b21cdbe74f63b295c59",
+                "reference": "52dbf5d6731d0f9b5bcf3b21cdbe74f63b295c59",
                 "shasum": ""
             },
             "require": {
@@ -100,22 +100,22 @@
             ],
             "support": {
                 "issues": "https://github.com/irwtdvoys/bolt-core/issues",
-                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.4"
+                "source": "https://github.com/irwtdvoys/bolt-core/tree/0.10.6"
             },
-            "time": "2020-12-13T20:09:58+00:00"
+            "time": "2021-06-24T20:23:02+00:00"
         },
         {
             "name": "cruxoft/bolt-geojson",
-            "version": "0.9.0",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/irwtdvoys/bolt-geojson.git",
-                "reference": "729803fdddc4d0acc735df917d26cd2bc2dcfe72"
+                "reference": "1926825c2a9cbfa1e8620e12ebc4518e3c92f951"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/irwtdvoys/bolt-geojson/zipball/729803fdddc4d0acc735df917d26cd2bc2dcfe72",
-                "reference": "729803fdddc4d0acc735df917d26cd2bc2dcfe72",
+                "url": "https://api.github.com/repos/irwtdvoys/bolt-geojson/zipball/1926825c2a9cbfa1e8620e12ebc4518e3c92f951",
+                "reference": "1926825c2a9cbfa1e8620e12ebc4518e3c92f951",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             ],
             "support": {
                 "issues": "https://github.com/irwtdvoys/bolt-geojson/issues",
-                "source": "https://github.com/irwtdvoys/bolt-geojson/tree/0.9.0"
+                "source": "https://github.com/irwtdvoys/bolt-geojson/tree/0.9.1"
             },
-            "time": "2021-06-24T13:54:12+00:00"
+            "time": "2021-06-24T16:16:08+00:00"
         },
         {
             "name": "cruxoft/bolt-mvc",
