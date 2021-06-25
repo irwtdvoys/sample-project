@@ -11,6 +11,7 @@
 	$dotenv->load();
 
 	define("DEPLOYMENT", getenv("DEPLOYMENT")); // development or production
+	define("API_NAME", "Sample Project");
 
 	// Versioning
 	#define("VERSION_EXTERNAL_AUTH", "v1.6");

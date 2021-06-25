@@ -10,9 +10,9 @@
 	{
 		use Outputable;
 
-		public $code;
-		public $location;
-		public $distance;
+		public ?string $code = null;
+		public ?Geometry $location = null;
+		public ?int $distance = null;
 
 		public function __construct(Connection $connection = null, $data = null)
 		{
