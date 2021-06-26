@@ -1,4 +1,4 @@
-# Sample Project (0.1.0)
+# Sample Project (0.1.1)
 
 ## Purpose
 
