@@ -60,7 +60,7 @@ $ ./bin/run.php --job Import --data '{"file":"scripts/data/bh.csv"}'
 
 #### Health Check
 
-There is a simple health check endpoint in the app. It can be useful for scenarios where you need to check the status of the API without doing anything to computationally expensive (it just returns a 200). For example AWS ELB poll a health check to detect unavailable instances.
+There is a simple health check endpoint in the app. It can be useful for scenarios where you need to check the status of the API without doing anything too computationally expensive (it just returns a 200). For example AWS ELB poll a health check to detect unavailable instances.
 
 | URL  | Method| Description|
 | ------------- | ------------- | ------------- |
@@ -136,7 +136,7 @@ By searching on location the postcodes can be orders based on distance from a sp
 
 **Request**
 
-This call doesn't include a `Range` header so the API will be assuming a range of 0-24.
+This call doesn't include a `Range` header, so the API will be assuming a range of 0-24.
 
 ```sh
 curl -v -X POST \
